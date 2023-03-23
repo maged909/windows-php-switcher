@@ -1,7 +1,14 @@
 # windows-php-switcher
 PHP Switcher is a simple tool that allows you to switch between php versions by modifying the system environment variable "PATH" to tell windows where the disired php is.
 
-# installation
+- [Installation](#Installation)
+- [Requirements](#Requirements)
+- [Configration](#Configration)
+- [Config Notes](#Config Notes)
+- [Usage](#Usage)
+
+
+# Installation
 -	clone the repo
 
 		git clone https://github.com/maged909/windows-php-switcher.git
@@ -37,13 +44,13 @@ here's an example
 here i have two php versions php7.3 and php8.2.3 each one with their selection that would show in menu and their path that would be used in the environment variable
 i'm here using php in my xampp folder but you can point to wherever you have the php 
 
-# Config Notes:
+# Config Notes
 - each php version must have selection and path
 - selection must be unique for each php version
 - path must be a valid absolute path to the php folder not file and cannot contain ";"
 	
 	
-# usage
+# Usage
 to use it just run the phpSwitcher.py on a terminal that has an adminstrator permissions
 
 	python phpSwitcher.py
