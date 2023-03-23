@@ -1,6 +1,8 @@
 # windows-php-switcher
 PHP Switcher is a simple python tool that allows you to switch between php versions by modifying the system environment variable "PATH" to tell windows where the disired php is.
 
+![program picture](https://github.com/maged909/windows-php-switcher/blob/main/program%20screenshot.jpg)
+
 - [Installation](#Installation)
 - [Requirements](#Requirements)
 - [Configration](#Configration)
@@ -56,7 +58,6 @@ to use it just run the phpSwitcher.py on a terminal that has an adminstrator per
 	python phpSwitcher.py
 	
 keep in mind that the script would ask for primission that's just coz it needs that to modify the system environment variable "PATH"
+after choosing the selection and changing the php any already opened terminals would still be working with the old php so you need to restart them
 
-
-![program picture](https://github.com/maged909/windows-php-switcher/blob/main/program%20screenshot.jpg)
 
