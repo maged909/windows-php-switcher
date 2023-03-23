@@ -4,7 +4,7 @@ PHP Switcher is a simple tool that allows you to switch between php versions by 
 - [Installation](#Installation)
 - [Requirements](#Requirements)
 - [Configration](#Configration)
-- [Config Notes](#Config Notes)
+- [Config Notes](#config-notes)
 - [Usage](#Usage)
 
 
