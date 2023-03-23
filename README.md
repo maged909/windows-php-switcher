@@ -57,7 +57,7 @@ to use it just run the phpSwitcher.py on a terminal that has an adminstrator per
 
 	python phpSwitcher.py
 	
-keep in mind that the script would ask for primission that's just coz it needs that to modify the system environment variable "PATH"
-after choosing the selection and changing the php any already opened terminals would still be working with the old php so you need to restart them
+- keep in mind that the script would ask for primission that's just coz it needs that to modify the system environment variable "PATH"
+- after choosing the selection and changing the php any already opened terminals would still be working with the old php so you need to restart them
 
 
