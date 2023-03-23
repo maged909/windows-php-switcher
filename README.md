@@ -14,6 +14,8 @@ PHP Switcher is a simple python tool that allows you to switch between php versi
 -	clone the repo
 
 		git clone https://github.com/maged909/windows-php-switcher.git
+		
+	or download it you can also look up the [Releases](https://github.com/maged909/windows-php-switcher/releases) :)
 
 -	changes the current directory to windows-php-switcher
 
