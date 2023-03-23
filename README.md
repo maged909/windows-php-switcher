@@ -45,5 +45,5 @@ to use it just run the phpSwitcher.py
 keep in mind that the script would ask for primission that's just coz it needs that to modify the system environment variable "PATH"
 
 
-![program picture](https://github.com/maged909/windows-php-switcher.git)
+![program picture](https://github.com/maged909/windows-php-switcher/blob/main/program%20screenshot.jpg)
 
