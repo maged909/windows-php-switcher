@@ -32,6 +32,7 @@ if not is_admin():
     print(errorColoring + "Error: Access Denied, make sure to run the program as an Adminstrator for it to be able to edit system environment variables" + Style.RESET_ALL)
     input('')
     sys.exit(0)
+    
 
 # Load the contents of the JSON file into a dictionary
 with open('config.json', 'r') as file:
