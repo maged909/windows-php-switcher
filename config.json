@@ -1,0 +1,10 @@
+{
+    "php7.3": {
+        "selection": "1", 
+        "path": "C:\\xampp\\php"
+    },
+    "php8.2.3": {
+        "selection": "2",
+        "path": "C:\\xampp\\php823"
+    }
+}
