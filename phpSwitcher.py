@@ -5,7 +5,8 @@ from colorama import init, Fore,Back, Style
 init()
 
 errorColoring = Fore.WHITE + Back.RED
-docs = 'https://github.com/kingron/s#how-to-compile'
+docs = 'https://github.com/maged909/windows-php-switcher'
+configGuideUrl = "https://github.com/maged909/windows-php-switcher/blob/main/README.md#config-notes"
 
 # Define constants from the Windows API
 ASADMIN = 'asadmin'
@@ -22,6 +23,9 @@ def is_admin():
         return ctypes.windll.shell32.IsUserAnAdmin()
     except:
         return False
+    
+def configGuide():
+    print(errorColoring + f"Check Our Config Guide on the documentaions: {configGuideUrl} " + Style.RESET_ALL)
     
 
 if not is_admin():
@@ -40,17 +44,21 @@ if os.path.exists('config.json'):
     expected_keys = {"selection", 'path'}
     for key in php_versions:
         if not isinstance(php_versions[key], dict) or set(php_versions[key].keys()) != expected_keys:
-            print(errorColoring + "Config Error: 'config.json' has an invalid structure. key {} must have 'path' and 'selection' keys".format(key) + Style.RESET_ALL)
+            print(errorColoring + "Config Error: 'config.json' has an invalid structure. key {} must have 'path' and 'selection' keys." + Style.RESET_ALL)
+            configGuide()
             validationFailed = True
         if not validationFailed:
             if php_versions[key]['selection'] == 'ext':
                 print(errorColoring + "Config Error: selection for {} equals 'ext' which is a reserved value and cannot be used for 'selection'.".format(key)+ Style.RESET_ALL)
+                configGuide()
                 validationFailed = True
             if not os.path.isabs(php_versions[key]['path']):
                 print(errorColoring + "Config Error: 'path' value for '{}' is not a vaild absolute path.".format(key)+ Style.RESET_ALL)
+                configGuide()
                 validationFailed = True
             if re.search(r';', php_versions[key]['path']):
                 print(errorColoring + "Config Error: 'path' value for '{}' contains ';' character.".format(key)+ Style.RESET_ALL)
+                configGuide()
                 validationFailed = True
     if not validationFailed:
         # Check that there are no duplicate values in any key or value
@@ -59,10 +67,12 @@ if os.path.exists('config.json'):
             flat_values.extend(list(value.values()) + [key])
         if len(set(flat_values)) != len(flat_values):
             print(errorColoring + "Error: 'config.json' contains duplicate values."+Style.RESET_ALL)
+            configGuide()
         else:
             validConfig = True
 else:
     print(errorColoring + "Error: MISSING 'config.json' - does not exist in the current directory."+Style.RESET_ALL)
+    configGuide()
 
 if validConfig:
     # Add a new key-value pair to the dictionary
@@ -91,6 +101,7 @@ if validConfig:
 
     while True:
         os.system('cls')
+        print(Fore.BLUE +Style.BRIGHT + "Repo: " + docs + Style.RESET_ALL)
         print(file_contents)
 
         print(f" ----- PHP version: {Fore.GREEN +Style.BRIGHT + php_version + Style.RESET_ALL} -----")
